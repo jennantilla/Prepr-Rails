@@ -5,7 +5,7 @@ class InventoriesController < ApplicationController
   # GET /inventories
   # GET /inventories.json
   def index
-    @inventories = Inventory.all
+    @inventories = Inventory.search(params[:search])
   end
 
   # GET /inventories/1
@@ -70,6 +70,6 @@ class InventoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def inventory_params
-      params.require(:inventory).permit(:item, :category, :quantity, :expiration, :user_id)
+      params.require(:inventory).permit(:item, :category, :quantity, :expiration, :user_id, :search)
     end
 end
