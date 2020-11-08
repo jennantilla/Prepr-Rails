@@ -5,3 +5,30 @@
 table {
     width: 100%;
 }
+
+#search-img {
+    display: inline-block;
+    float: left;
+    padding: 1px;
+}
+
+#search-field {
+    display: inline-block;
+    border-style: solid;
+    border-color: red;
+}
+
+.search-btn {
+    background-color: white;
+    border: none;
+}
+
+#search {
+    border-style: none;
+}
+
+.action-btn {
+    border-color: red;
+    background-color: red;
+    color: white;
+}

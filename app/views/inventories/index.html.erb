@@ -1,11 +1,19 @@
-<h1 class="header">Inventories</h1>
+<h1 class="header">Inventory</h1>
+<div id="search-field">
+  <%= form_tag inventories_path, :method => "get" do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= button_tag type: 'submit', class: "search-btn" do %>
+      <i class="fas fa-search fa-2x" style="color:red;" id="search-img"></i>
+    <% end %>
+  <% end %>
+</div>
+<br>
+<br>
 
-<h3>Search</h3>
-<%= form_tag inventories_path, :method => "get" do %>
-  <%= label_tag(:search, "Look up an item") %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", :name => nil %>
-<% end %>
+<div>
+  <%= button_to 'Add Item', new_inventory_path, method: "get", class: 'action-btn' %>
+</div>
+<br>
 
 <table>
   <thead>
@@ -24,14 +32,22 @@
         <td><%= inventory.category %></td>
         <td><%= inventory.quantity %></td>
         <td><%= inventory.expiration %></td>
-        <td><%= link_to 'Show', inventory %></td>
-        <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
-        <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to inventory do %>
+            <i class="fas fa-eye" style="color:red;"></i>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to edit_inventory_path(inventory) do %>
+            <i class="fas fa-pen" style="color:red;"></i>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to inventory, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="fas fa-trash" style="color:red;"></i>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Inventory Item', new_inventory_path %>
