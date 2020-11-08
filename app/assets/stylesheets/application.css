@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar-custom {
+    background-color: #e63419;
+}
+
+.header {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#title {
+    display: inline-block;
+}
+
+#img {
+    display: inline-block;
+    float: right;
+    height: 350px;
+    padding: 3px;
+}
+
+#img-credit {
+    float: right;
+}
