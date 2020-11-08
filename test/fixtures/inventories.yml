@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  category: MyString
+  quantity: 1
+  expiration: 2020-11-07
+  user: one
+
+two:
+  item: MyString
+  category: MyString
+  quantity: 1
+  expiration: 2020-11-07
+  user: two
