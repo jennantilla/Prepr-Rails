@@ -1,24 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Item:</strong>
-  <%= @inventory.item %>
-</p>
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <td id="show-img">
+      <img style="height:200px" src="<%=(url_for(@inventory.img))%>">
+  </td>
+  <td>
+    <p>
+      <strong>Item:</strong>
+      <%= @inventory.item %>
+    </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @inventory.category %>
-</p>
+    <p>
+      <strong>Category:</strong>
+      <%= @inventory.category %>
+    </p>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @inventory.quantity %>
-</p>
+    <p>
+      <strong>Quantity:</strong>
+      <%= @inventory.quantity %>
+    </p>
 
-<p>
-  <strong>Expiration:</strong>
-  <%= @inventory.expiration %>
-</p>
+    <p>
+      <strong>Expiration:</strong>
+      <%= @inventory.expiration %>
+    </p>
+    <%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+    <%= link_to 'Back', inventories_path %>
+  </td>
+</table>
 
-<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
-<%= link_to 'Back', inventories_path %>
+

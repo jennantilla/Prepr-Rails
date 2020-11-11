@@ -3,32 +3,36 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 table {
-    width: 100%;
+  width: 100%;
 }
 
 #search-img {
-    display: inline-block;
-    float: left;
-    padding: 1px;
+  display: inline-block;
+  float: left;
+  padding: 1px;
 }
 
 #search-field {
-    display: inline-block;
-    border-style: solid;
-    border-color: red;
+  display: inline-block;
+  border-style: solid;
+  border-color: red;
 }
 
 .search-btn {
-    background-color: white;
-    border: none;
+  background-color: white;
+  border: none;
 }
 
 #search {
-    border-style: none;
+  border-style: none;
+}
+
+#show-img {
+  width: 100px;
 }
 
 .action-btn {
-    border-color: red;
-    background-color: red;
-    color: white;
+  border-color: red;
+  background-color: red;
+  color: white;
 }
