@@ -16,7 +16,7 @@ This app was built with Ruby 2.7 & Rails 6.0.3. Both need to be installed to run
 
 2. Clone the github repository
 
-   `$ git clone https://github.com/jennantilla/forum.git`
+   `$ git clone https://github.com/jennantilla/stockit.git`
 
 3. Create and setup the database
 
